@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { MapPin, MessageCircle, ShieldCheck, Truck } from 'lucide-react'
 
 export const metadata = {
-  title: 'Fresh Milk Delivery in Muzaffarpur',
+  title: 'Fresh Milk Delivery in Muzaffarpur,Bihar | Raj Ganesh Dairy',
   description:
     'Order pure, hygienic and fresh milk delivery in Muzaffarpur from Raj Ganesh Dairy. Daily milk, paneer, dahi and monthly subscription plans for local families.',
   alternates: {
