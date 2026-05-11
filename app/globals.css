@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: #fffdf7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  color: #162118;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(215, 168, 66, 0.16), transparent 30%),
+    linear-gradient(180deg, #fffdf7 0%, #fff8e8 52%, #f5fbf0 100%);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(31, 111, 67, 0.18);
+}
+
+.trust-texture {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.72)),
+    repeating-linear-gradient(135deg, rgba(31, 111, 67, 0.04) 0 1px, transparent 1px 18px);
+}
