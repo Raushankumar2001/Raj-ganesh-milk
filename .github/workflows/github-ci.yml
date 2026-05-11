@@ -11,11 +11,9 @@ on:
       - main
       - develop
 
-# 🔒 Least privilege
 permissions:
   contents: read
 
-# 🚫 Cancel duplicate workflow runs
 concurrency:
   group: nextjs-ci-${{ github.ref }}
   cancel-in-progress: true
@@ -26,38 +24,34 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
-    strategy:
-      matrix:
-        node-version: [18, 20]
-
     steps:
-      # 📥 Checkout repository
+      # Checkout repository
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # ⚙️ Setup Node.js
+      # Setup Node.js 20
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 20
           cache: npm
 
-      # 📦 Install dependencies
+      # Install dependencies
       - name: Install dependencies
         run: npm ci
 
-      # 🔍 Run ESLint
+      # Run lint
       - name: Run lint
         run: npm run lint
 
-      # 🔐 Run security audit
+      # Security audit
       - name: Security audit
         run: npm audit --audit-level=high
 
-      # 🏗️ Build Next.js project
+      # Build Next.js app
       - name: Build application
         run: npm run build
 
-      # ✅ Success message
+      # Success message
       - name: Success
         run: echo "✅ Next.js CI completed successfully"
