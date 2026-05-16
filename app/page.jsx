@@ -45,7 +45,7 @@ const products = [
   {
     name: 'Ghee',
     text: 'Aromatic dairy ghee prepared with patient, traditional care.',
-    price: 'Up-comming',
+    price: 'Limited batch',
   },
 ]
 
